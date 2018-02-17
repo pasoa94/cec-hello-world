@@ -1,15 +1,22 @@
 import socket
-import time
 from flask import Flask
+import datetime from datetime 
 
 application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    #flog = open('\mnt\log.txt', 'a')
-    #flog.write("" + socket.gethostname())
-    #flog.close()
-    return "Hello Italy! Greetings from "+socket.gethostname()+ time.time()+ "\n"
+    #open the log file
+    with open("/mnt/log", "w") as log: #append mode
+        log.write(str(datatime.now() + ":" + socket.gethostname() + "\n") #write a line
+    
+    #read the log history
+    log = open("/mnt/log","r")
+    log_history = log.read()
+    log.close()   
+    
+    
+    return log
 
 
 if __name__ == "__main__":
