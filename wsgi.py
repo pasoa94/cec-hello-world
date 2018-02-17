@@ -16,7 +16,7 @@ def hello():
     log.close()   
     
     
-    return log_history
+    return "<html><head><title>My First App</title></head><body>"+log_history+"</body></html>"
 
 
 if __name__ == "__main__":
