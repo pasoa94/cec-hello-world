@@ -8,7 +8,7 @@ application = Flask(__name__)
 def hello():
     #open the log file
     with open("/mnt/log", "w") as log: #append mode
-        log.write(str(datatime.now() + ":" + socket.gethostname() + "\n") #write a line
+        log.write(str(datatime.now()) + ":" + socket.gethostname() + "\n") #write a line
     
     #read the log history
     log = open("/mnt/log","r")
