@@ -6,10 +6,10 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    flog = open('\mnt\log.txt', 'a')
-    flog.write("" + socket.gethostname())
-    flog.close()
-    return "Hello Italy! Greetings from "+socket.gethostname()+"\n"
+    #flog = open('\mnt\log.txt', 'a')
+    #flog.write("" + socket.gethostname())
+    #flog.close()
+    return "Hello Italy! Greetings from "+socket.gethostname()+ time.time()+ "\n"
 
 
 if __name__ == "__main__":
