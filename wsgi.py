@@ -16,7 +16,7 @@ def hello():
     log.close()   
     
     
-    return log
+    return log_history
 
 
 if __name__ == "__main__":
