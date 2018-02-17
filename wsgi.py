@@ -1,6 +1,6 @@
 import socket
 from flask import Flask
-import datetime from datetime 
+from datetime import datetime 
 
 application = Flask(__name__)
 
