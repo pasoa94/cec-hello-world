@@ -16,7 +16,7 @@ def hello():
     log_history = log_file.read()
     log_file.close()   
     
-    return str(log_history)
+    return str(<html><title>CEC</title><body>log_history</body></html>)
 
 
 if __name__ == "__main__":
