@@ -10,11 +10,12 @@ def hello():
     #open the log file
     with open("/mnt/log", "w") as log: #append mode
         log.write(str(datatime.now()) + ":" + socket.gethostname() + "\n<br>") #write a line
-    
+    print("here")
     #read the log history
     log_file = open("/mnt/log","r")
     log_history = log_file.read()
-    log_file.close()   
+    log_file.close()  
+    print("here 2")
     txt = "<html><title>CEC</title><body>"+log_history+"</body></html>"
     return txt
 
