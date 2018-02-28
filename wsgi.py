@@ -16,7 +16,7 @@ def hello():
     log_history = log.read()
     log.close()   
     
-    return ""+log_history
+    return str(log_history)
 
 
 if __name__ == "__main__":
