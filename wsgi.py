@@ -9,7 +9,7 @@ application = Flask(__name__)
 def hello():
     #read the log file and update it with the new log
     with open("/mnt/log_history", "a") as f:
-        f.write(str(datetime.now()) +"   --->   " + socket.gethostname() + "<br>\n") 
+        f.write(str(datetime.now()) +"         ------->         " + socket.gethostname() + "<br>\n") 
     
     #open the log file for printing it in the body of the application
     f = open("/mnt/log_history","r")
