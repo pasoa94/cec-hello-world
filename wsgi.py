@@ -9,12 +9,12 @@ application = Flask(__name__)
 def hello():
     #open the log file
     with open("/mnt/log", "w") as log: #append mode
-        log.write(str(datatime.now()) + ":" + socket.gethostname() + "\n") #write a line
+        log.write(str(datatime.now()) + ":" + socket.gethostname() + "\n<br>") #write a line
     
     #read the log history
-    log = open("/mnt/log","r")
-    log_history = log.read()
-    log.close()   
+    log_file = open("/mnt/log","r")
+    log_history = log_file.read()
+    log_file.close()   
     
     return str(log_history)
 
