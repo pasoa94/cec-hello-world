@@ -8,15 +8,25 @@ application = Flask(__name__)
 
 def hello():
     #open the log file
-    with open("/mnt/log", "w") as log: #append mode
-        log.write(str(datatime.now()) + ":" + socket.gethostname() + "\n<br>") #write a line
-    print("here")
+    #with open("/mnt/log", "w") as log: #append mode
+    #    log.write(str(datatime.now()) + ":" + socket.gethostname() + "\n<br>") #write a line
+    
     #read the log history
-    log_file = open("/mnt/log","r")
-    log_history = log_file.read()
-    log_file.close()  
-    print("here 2")
-    txt = "<html><title>CEC</title><body>"+log_history+"</body></html>"
+    #log_file = open("/mnt/log","r")
+    #log_history = log_file.read()
+    #log_file.close()  
+    
+    #txt = "<html><title>CEC</title><body>"+log_history+"</body></html>"
+    
+    with open("/mnt/logfile", "a") as file:
+        file.write(str(datetime.now()) +": " + socket.gethostname() + "<br>\n") 
+    
+    #open logfile and return its contents
+    fr = open("/mnt/logfile","r")
+    log = fr.read()
+    fr.close()
+    txt = "<html><title> Jarvis Logfile </title><body>" + log + "</body></html>"
+    
     return txt
 
 if __name__ == "__main__":
