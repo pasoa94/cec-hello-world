@@ -15,9 +15,8 @@ def hello():
     log_file = open("/mnt/log","r")
     log_history = log_file.read()
     log_file.close()   
-    
-    return str(<html><title>CEC</title><body>log_history</body></html>)
-
+    txt = "" + <html><title>CEC</title><body>log_history</body></html>
+    return txt
 
 if __name__ == "__main__":
     application.run()
