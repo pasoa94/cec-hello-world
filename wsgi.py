@@ -18,14 +18,14 @@ def hello():
     
     #txt = "<html><title>CEC</title><body>"+log_history+"</body></html>"
     
-    with open("/mnt/logfile", "a") as file:
-        file.write(str(datetime.now()) +": " + socket.gethostname() + "<br>\n") 
+    with open("/mnt/logfile", "w") as f:
+        f.write(str(datetime.now()) +"---> " + socket.gethostname() + "<br>\n") 
     
     #open logfile and return its contents
-    fr = open("/mnt/logfile","r")
-    log = fr.read()
-    fr.close()
-    txt = "<html><title> Jarvis Logfile </title><body>" + log + "</body></html>"
+    f = open("/mnt/logfile","r")
+    foo = f.read()
+    f.close()
+    txt = "<html><title>Song3</title><body>" + foo + "</body></html>"
     
     return txt
 
